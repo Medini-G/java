@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class Main {
+    void display (int a){
+        double originalPrice = 100.0;
+        double finalPrice;
+       if (a < 12) {
+            finalPrice = originalPrice * 0.5;  
+        } else if (a >= 60) {
+            finalPrice = originalPrice * 0.7;  
+        } else {
+            finalPrice = originalPrice;  
+        }
+         System.out.println("The total cost of the ticket is: $" + finalPrice);
+    }
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        Main m=new Main();
+        m.display(a);
+    }
+}
