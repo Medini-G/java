@@ -1,0 +1,41 @@
+import java.util.Scanner;
+    class main{
+    public static void main(String[] args) {
+        bank ref=new bank("ren",200);
+        System.out.println("accholder:"+ref.getaccholder());
+        System.out.println("amount:"+ref.getamount());
+        ref.setaccholder("jim");
+         System.out.println("update accholder:"+ref.getaccholder());
+         ref.setamount(200);
+         System.out.println("deposit:"+ref.getamount());
+         ref.getamount(200);
+         System.out.println("current balance:"+ref.getamount());
+        }
+}
+    class bank {  
+        private String accholder;
+        private int amount;
+         bank(String accholder,int amount){
+             this .accholder=accholder;
+             this.amount=amount;
+              }
+              public String getaccholder(){
+                  return accholder;
+                  }
+                  public int getamount(){
+                  return amount;
+                  }
+                  public void setaccholder(String accholder){
+                      this.accholder=accholder;
+                  }
+                  public void setamount(int balance){
+                      if(amount>0)
+                      amount+=balance;
+                      System.out.print("deposit amount:"+balance);
+                  }
+                    public void getamount(int balance){
+                      if(amount>0)
+                      amount-=balance;
+                      System.out.println("withdraw:"+amount);
+                   }
+    }
