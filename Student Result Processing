@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class Main {
+    void display(int a){
+     System.out.println("enter the mark of the student:"+ a);
+        if(a>=50){
+            System.out.print("student is passed");
+        }
+        else
+        {
+            System.out.print("student is failed");
+        }
+}
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        int a=input.nextInt();
+        Main m=new Main();
+        m.display(a);
+}
+}
